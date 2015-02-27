@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         lblMessage.textColor = UIColor.redColor()
         
         txtEnterMessage.resignFirstResponder()
-        
+        //adding a comment to test git commit
     }
 
 }
