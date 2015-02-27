@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var txtEnterName: UITextField!
+    @IBOutlet weak var txtEnterMessage: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnSendMailPressed(sender: UIButton) {
+        //sender.backgroundColor = UIColor.redColor()
+
+        //sender.setTitle("Mail Sent", forState: UIControlState.Normal)
+        sender.setTitle("Sent", forState: .Normal)
+        
+        lblMessage.text = txtEnterMessage.text
+        txtEnterName.text = ""
+        txtEnterMessage.text = ""
+        
+        lblMessage.hidden = false
+        lblMessage.textColor = UIColor.redColor()
+        
+        txtEnterMessage.resignFirstResponder()
+        
+    }
 
 }
 
