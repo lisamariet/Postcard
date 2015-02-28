@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var txtEnterName: UITextField!
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var txtEnterMessage: UITextField!
 
     override func viewDidLoad() {
@@ -30,14 +31,18 @@ class ViewController: UIViewController {
         sender.setTitle("Sent", forState: .Normal)
         
         lblMessage.text = txtEnterMessage.text
-        txtEnterName.text = ""
-        txtEnterMessage.text = ""
-        
         lblMessage.hidden = false
         lblMessage.textColor = UIColor.redColor()
         
+        lblName.text = txtEnterName.text
+        lblName.hidden = false
+        lblName.textColor = UIColor.blueColor()
+        
+        txtEnterName.text = ""
+        txtEnterMessage.text = ""
         txtEnterMessage.resignFirstResponder()
-        //adding a comment to test git commit
+        txtEnterName.resignFirstResponder()
+        
     }
 
 }
